@@ -1,0 +1,26 @@
+@use '../../../assets/scss/functions' as f;
+
+.notification {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+
+  &__title {
+    color: f.color(grey900);
+    line-height: 1.8125rem;
+    text-align: center;
+  }
+
+  &__link {
+    background: f.color(blue100);
+    color: f.color(blue600);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.3125rem;
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+}

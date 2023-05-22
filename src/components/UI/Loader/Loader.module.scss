@@ -1,0 +1,20 @@
+@use '../../../assets/scss/functions' as f;
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 12px solid f.color(grey100);
+  border-top: 12px solid f.color(blue500);
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

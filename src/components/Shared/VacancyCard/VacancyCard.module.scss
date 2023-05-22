@@ -1,0 +1,74 @@
+@use '../../../assets/scss/functions' as f;
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.125rem;
+
+    &_in-list {
+      color: f.color(blue500);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__button {
+    &:hover {
+      path {
+        stroke: f.color(blue500);
+      }
+    }
+
+    &_active {
+      path {
+        stroke: f.color(blue500);
+        fill: f.color(blue500);
+      }
+    }
+  }
+
+  &__main-info {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &_in-list {
+      font-size: 1rem;
+      margin: 0.75rem 0;
+    }
+  }
+
+  &__payment {
+    font-weight: 600;
+    margin-right: 0.75rem;
+  }
+
+  &__separator {
+    color: f.color(grey600);
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__icon {
+    vertical-align: text-bottom;
+    margin-right: 0.5rem;
+  }
+}

@@ -1,0 +1,61 @@
+@use '../../../assets/scss/mixins' as m;
+@use '../../../assets/scss/functions' as f;
+
+.vacancies {
+  grid-area: vacancies;
+
+  &__item {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.position-container {
+  position: absolute;
+  bottom: 2.75rem;
+  transform: translateX(-50%);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.5rem;
+
+  &__link {
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    background: f.color(white);
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid f.color(grey300);
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_active {
+      cursor: default;
+      background: f.color(blue500);
+      color: f.color(white);
+      border: none;
+    }
+
+    &_disabled {
+      cursor: default;
+      border-color: f.color(grey200);
+
+      path {
+        fill: f.color(grey300);
+      }
+    }
+  }
+
+  &__icon {
+    &_reversed {
+      transform: scaleX(-1);
+    }
+  }
+}

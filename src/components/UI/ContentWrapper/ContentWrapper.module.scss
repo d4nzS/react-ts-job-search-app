@@ -1,0 +1,6 @@
+@use '../../../assets/scss/functions' as f;
+
+.wrapper {
+  background: f.color(white);
+  border: 1px solid f.color(grey200);
+}

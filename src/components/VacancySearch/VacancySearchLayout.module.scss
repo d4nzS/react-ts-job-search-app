@@ -1,0 +1,18 @@
+@use '../../assets/scss/mixins' as m;
+
+.main {
+  max-width: 69.75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem 1.75rem;
+  grid-template-areas: 'search-bar'
+                       'filters'
+                       'vacancies';
+
+  @include m.media(lg) {
+    grid-template-columns: 21.875rem 1fr;
+    grid-template-areas: 'filters search-bar'
+                         'filters vacancies'
+                         '. vacancies';
+  }
+}

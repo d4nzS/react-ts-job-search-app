@@ -1,0 +1,17 @@
+@use '../../../assets/scss/functions' as f;
+
+.button {
+  background: f.color(blue500);
+  color: f.color(white);
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background: f.color(blue400);
+  }
+
+  &:active {
+    background: f.color(blue600);
+  }
+}

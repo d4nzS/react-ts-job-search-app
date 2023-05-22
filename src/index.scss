@@ -1,0 +1,57 @@
+@use 'assets/scss/functions' as f;
+@import 'assets/scss/fonts';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input, button {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+  cursor: pointer;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  overflow-x: hidden;
+  background: #F7F7F8;
+  color: f.color(black);
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  min-height: 100vh;
+  margin-right: calc(100% - 100vw);
+  position: relative;
+
+  &.without-scroll {
+    overflow-y: hidden;
+  }
+}

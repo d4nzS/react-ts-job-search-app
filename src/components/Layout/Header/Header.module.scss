@@ -1,0 +1,25 @@
+@use '../../../assets/scss/functions' as f;
+
+.header {
+  background: f.color(white);
+  padding: 1.5rem 1rem;
+  position: relative;
+
+  &__wrapper {
+    max-width: 69.75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  &__title {
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+    margin-left: 0.75rem;
+    margin-right: 3.75rem;
+  }
+}

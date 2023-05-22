@@ -1,0 +1,128 @@
+@use '../../../assets/scss/functions' as f;
+
+.controller {
+  position: relative;
+
+  &__label {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  &__input {
+    caret-color: f.color(blue500);
+    width: 100%;
+    padding: 0.6875rem 0.75rem;
+    border: 1px solid f.color(grey300);
+    border-radius: 0.5rem;
+
+    &:focus {
+      border-color: f.color(blue500);
+    }
+
+    &::placeholder {
+      color: f.color(grey500);
+    }
+
+    &_type_select {
+      cursor: pointer;
+      color: f.color(grey500);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &_active {
+        border-color: f.color(blue500);
+
+        svg {
+          transform: scaleY(-1);
+
+          path {
+            stroke: f.color(blue500);
+          }
+        }
+      }
+    }
+  }
+
+  &__selected {
+    color: f.color(black);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.5rem;
+  }
+
+  &__button {
+    &:hover {
+      path {
+        stroke: f.color(blue400);
+      }
+    }
+
+    &:active {
+      path {
+        stroke: f.color(blue500);
+      }
+    }
+
+    &_reversed {
+      transform: scaleY(-1);
+    }
+  }
+}
+
+.dropdown {
+  background: f.color(white);
+  font-size: 0.875rem;
+  font-weight: 500;
+  width: 100%;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 5.25rem;
+  z-index: 1;
+
+  &__list {
+    overflow: auto;
+    max-height: 11.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: f.color(grey500) transparent;
+
+    &::-webkit-scrollbar {
+      width: 0.25rem;
+      height: 1.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 2rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: f.color(grey500);
+      border-radius: 1.25rem;
+
+    }
+
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &_active {
+      color: f.color(white);
+      background: f.color(blue500);
+    }
+  }
+}
